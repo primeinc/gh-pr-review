@@ -15,8 +15,11 @@ func Execute() error {
 
 func newRootCommand() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:           "gh-pr-review",
-		Short:         "PR review helper commands for gh",
+		Use:   "gh-pr-review",
+		Short: "PR review helper commands for gh",
+		Annotations: map[string]string{
+			cobra.CommandDisplayNameAnnotation: "gh pr-review",
+		},
 		SilenceUsage:  true,
 		SilenceErrors: true,
 	}
